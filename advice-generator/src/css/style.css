@@ -1,0 +1,183 @@
+html {
+  font-size: 75%;
+  box-sizing: border-box;
+  min-block-size: 100vh;
+  overflow-x: hidden;
+}
+
+@media screen and (width > 30em) {
+  html {
+    font-size: 87.5%;
+  }
+}
+@media screen and (width > 79.9375em) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --base-fs: 1rem;
+  --base-padding: 0.5em;
+  --base-margin: 0.5em;
+  --base-br: 20px;
+  --base-gap: 0.5em;
+  --base-lh: 1.5;
+
+  --fw-regular: 400;
+  --fw-medium: calc(var(--fw-regular, 400) + 100);
+  --fw-semi: calc(var(--fw-medium, 500) + 100);
+  --fw-xbold: calc(var(--fw-semi, 600) + 100);
+
+  --fs-manrope: "Manrope", serif;
+  --fs-poppins: "Poppins", verdana, helvetica;
+
+  /* COLORS */
+  --body-bg: hsl(218, 23%, 16%);
+  --heading: hsl(193, 38%, 86%);
+  --text: hsl(180 38% 70%);
+  --link: hsl(180 88% 50%);
+  --advice-btn-bg: hsl(150, 100%, 66%);
+  --advice-card-heading: var(--advice-btn-bg);
+  --advice-card-bg: hsl(217, 19%, 24%);
+  --shadow: 217 19% 38%;
+  --advice-btn-shadow: 150, 100%, 66%;
+}
+
+body {
+  position: relative;
+  min-block-size: 100vh;
+  background-color: var(--body-bg);
+  font: var(--fw-regular) var(--base-fs) / var(--base-lh) var(--fs-poppins);
+  display: grid;
+  place-items: center;
+}
+
+/* TYPOGRAPHY */
+:is(h1, h2, h3, h4, h5, h6) {
+  font-weight: var(--fw-xbold);
+  font-family: var(--fw-manrope);
+  color: var(--heading);
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: calc(var(--base-lh) / 1.5);
+}
+
+p,
+span,
+li,
+label,
+a {
+  font-size: var(--base-fs);
+  color: var(--text);
+}
+
+a,
+a:link {
+  display: inline-block;
+  color: var(--link);
+}
+
+img {
+  display: block;
+}
+
+span {
+  display: inline-block;
+}
+
+/* LAYOUTS */
+.advice-card {
+  background-color: var(--advice-card-bg);
+  padding: calc(var(--base-padding) * 8) calc(var(--base-padding) * 5);
+  inline-size: 90vw;
+  border-radius: calc(var(--base-br) * 0.5);
+  box-shadow: 0 5px 10px hsl(var(--shadow) / 0.25);
+  position: relative;
+}
+
+@media screen and (width > 30em) {
+  .advice-card {
+    inline-size: min(75vw, 480px);
+    padding-block: calc(var(--base-padding) * 7);
+  }
+}
+
+.advice-card :is(h4, h1) {
+  text-align: center;
+}
+
+.advice-card > h4 {
+  color: var(--advice-card-heading);
+  text-transform: uppercase;
+  font-family: var(--fs-manrope);
+  letter-spacing: 4px;
+  font-weight: var(--fw-semi);
+  font-size: calc(var(--base-fs) * 0.8);
+}
+
+.advice-card > h1 {
+  padding-block: calc(var(--base-padding) * 2);
+  font-size: calc(var(--base-fs) * 1.75);
+  line-height: calc(var(--base-lh) / 1.2);
+}
+
+picture > img {
+  width: 100%;
+}
+
+.advice-btn {
+  position: absolute;
+  left: 50%;
+  bottom: -1.7rem;
+  transform: translateX(-50%);
+  background-color: var(--advice-btn-bg);
+  padding: calc(var(--base-padding) * 2.25);
+  border-radius: 50%;
+  border: none;
+  transition: box-shadow 150ms ease;
+}
+.advice-btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px hsl(var(--advice-btn-shadow));
+}
+
+.advice-btn img {
+  width: 1.5rem;
+}
+
+@media screen and (width > 30em) {
+  .advice-btn {
+    bottom: -1.5rem;
+  }
+  .advice-btn > img {
+    width: 1rem;
+  }
+}
+.attribution {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+}
+
+.attribution > :first-child {
+  text-align: center;
+}
