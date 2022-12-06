@@ -1,0 +1,12 @@
+# editor cache directories
+.vscode/*
+
+# npm cache directories & files
+node_modules
+package-lock.json
+pnpm-lock.yaml
+
+# os cache
+.DS_Store
+
+
