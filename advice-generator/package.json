@@ -1,0 +1,20 @@
+{
+  "name": "advice-generator",
+  "version": "1.0.0",
+  "description": "![Design preview for the Advice generator app coding challenge](./design/desktop-preview.jpg)",
+  "scripts": {
+    "start": "http-server ."
+  },
+  "keywords": [
+    "advice-app",
+    "advice-app challenge",
+    "advice-app by frontendmentor",
+    "frontendmentor challenge",
+    "api based advice app"
+  ],
+  "author": "Rahul Kumar",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.27.10"
+  }
+}

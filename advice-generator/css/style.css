@@ -1,0 +1,48 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  min-block-size: 100vh;
+  overflow-x: hidden;
+}
+
+@media screen and (width > 48em) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --base-fs: 1rem;
+  --base-padding: .5em;
+  --base-margin: .5em;
+  --base-br: 20px;
+  --base-gap: .5em;
+  --base-lh: 1.5;
+
+  --fw-regular: 400;
+  --fw-medium: calc(var(--fw-regular, 400) + 100);
+  --fw-semi: calc(var(--fw-medium, 500) + 100);
+  --fw-xbold: calc(var(--fw-semi, 600) + 100);
+
+  --fs-manrope: "Manrope", serif;
+  --fs-poppins: "Poppins", verdana, helvetica;
+
+}
+
+body {
+  font: var(--fw-regular) var(--base-fs)/var(--base-lh) var(--fs-poppins);
+}
