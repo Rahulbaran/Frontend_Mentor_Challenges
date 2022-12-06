@@ -1,9 +1,11 @@
 {
   "name": "advice-generator",
   "version": "1.0.0",
-  "description": "![Design preview for the Advice generator app coding challenge](./design/desktop-preview.jpg)",
+  "description": "advice-app is a junior level challenge by frontendmentor which is using an advice generator api for generating random advice",
   "scripts": {
-    "start": "http-server ."
+    "start": "browser-sync start -s --port 5000 -w",
+    "build:css": "postcss src/css/style.css -o dist/css/style.css",
+    "watch:css": "postcss src/css/style.css -o dist/css/style.css -w"
   },
   "keywords": [
     "advice-app",
@@ -12,9 +14,35 @@
     "frontendmentor challenge",
     "api based advice app"
   ],
+  "prettier": {
+    "arrowParens": "avoid",
+    "trailingComma": "none",
+    "singleQuote": false,
+    "semi": true,
+    "endOfLine": "auto"
+  },
+  "browserslist": {
+    "development": [
+      ">0.25%",
+      "not dead",
+      "not op_mini all",
+      "not IE 11"
+    ],
+    "production": [
+      ">0.25%",
+      "not dead",
+      "not op_mini all",
+      "not IE 11"
+    ]
+  },
   "author": "Rahul Kumar",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.27.10"
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.14",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.1.0",
+    "postcss-preset-env": "^7.8.3"
   }
 }
