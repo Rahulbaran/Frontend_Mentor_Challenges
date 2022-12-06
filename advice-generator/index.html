@@ -1,38 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Rahul Kumar">
-  <meta name="contact" content="rahulkumar109422@gmail.com">
-  <meta name="keywords" content="advice-app, advice-app challenge, advice-app by frontendmentor, frontendmentor challenge, api based advice app">
-  <meta name="description" content="advice-app is a junior level challenge by frontendmentor which is using an advice generator api for generating random advice">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rahul Kumar" />
+    <meta name="contact" content="rahulkumar109422@gmail.com" />
+    <meta
+      name="keywords"
+      content="advice-app, advice-app challenge, advice-app by frontendmentor, frontendmentor challenge, api based advice app"
+    />
+    <meta
+      name="description"
+      content="advice-app is a junior level challenge by frontendmentor which is using an advice generator api for generating random advice"
+    />
 
-  <title>Frontend Mentor | Advice generator app</title>
+    <title>Frontend Mentor | Advice generator app</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./dist/images/favicon-32x32.png"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./dist/css/style.css" />
 
-  <script src="./js/script.js" defer charset="utf-8"></script>
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <script src="./dist/js/script.js" defer charset="utf-8"></script>
+  </head>
+  <body>
+    <main class="advice-container">
+      <div class="advice-card">
+        <h4>advice #45</h4>
 
-  Advice #<!-- Advice ID goes here -->
+        <h1>
+          &ldquo;It is easy to situp and take notice, what's difficult is
+          getting up and taking action.&rdquo;
+        </h1>
 
-  "<!-- Advice text goes here -->"
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="./dist/images/pattern-divider-mobile.svg"
+          />
+          <source
+            media="(min-width: 769px)"
+            srcset="./dist/images/pattern-divider-desktop.svg"
+          />
+          <img
+            src="./dist/images/pattern-divider-mobile.svg"
+            alt="pattern divider"
+          />
+        </picture>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Rahul Kumar</a>.
-  </div>
-</body>
+        <button class="btn advice-btn">
+          <img src="./dist/images/icon-dice.svg" alt="dice icon" />
+        </button>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://github.com/Rahulbaran"
+          rel="noopener noreferrer"
+          target="_blank"
+          >Rahul Kumar</a
+        >.
+      </p>
+    </footer>
+  </body>
 </html>
