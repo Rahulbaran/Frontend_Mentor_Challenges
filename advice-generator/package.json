@@ -2,11 +2,6 @@
   "name": "advice-generator",
   "version": "1.0.0",
   "description": "advice-app is a junior level challenge by frontendmentor which is using an advice generator api for generating random advice",
-  "scripts": {
-    "start": "browser-sync start -s --port 5000 -w",
-    "build:css": "postcss src/css/style.css -o dist/css/style.css",
-    "watch:css": "postcss src/css/style.css -o dist/css/style.css -w"
-  },
   "keywords": [
     "advice-app",
     "advice-app challenge",
@@ -14,19 +9,24 @@
     "frontendmentor challenge",
     "api based advice app"
   ],
+  "scripts": {
+    "build:css": "postcss src/css/style.css --dir dist/css",
+    "watch:css": "postcss src/css/style.css --dir dist/css -w",
+    "start": "browser-sync start -s --port 5000 -w"
+  },
   "prettier": {
     "arrowParens": "avoid",
     "trailingComma": "none",
     "singleQuote": false,
     "semi": true,
-    "endOfLine": "auto"
+    "endOfLine": "auto",
+    "useTabs": false
   },
   "browserslist": {
     "development": [
-      ">0.25%",
-      "not dead",
-      "not op_mini all",
-      "not IE 11"
+      "last 2 chrome version",
+      "last 2 firefox version",
+      "last 2 safari version"
     ],
     "production": [
       ">0.25%",

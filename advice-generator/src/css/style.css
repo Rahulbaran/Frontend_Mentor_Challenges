@@ -54,7 +54,7 @@ html {
   --advice-btn-bg: hsl(150, 100%, 66%);
   --advice-card-heading: var(--advice-btn-bg);
   --advice-card-bg: hsl(217, 19%, 24%);
-  --shadow: 217 19% 38%;
+  --shadow: 217 10% 10%;
   --advice-btn-shadow: 150, 100%, 66%;
 }
 
@@ -152,7 +152,7 @@ picture > img {
   padding: calc(var(--base-padding) * 2.25);
   border-radius: 50%;
   border: none;
-  transition: box-shadow 150ms ease;
+  transition: box-shadow 200ms ease;
 }
 .advice-btn:hover {
   cursor: pointer;
